@@ -1,0 +1,172 @@
+
+.Procedure-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif; 
+  background-color: #f0f0f0; 
+}
+.procedure-video1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.procedure-steps {
+  margin-top: 20px;
+  padding-left: 20px;
+  text-align: justify; /* Justify the text */
+  padding-right: 20px; /* Add padding to the right */
+  line-height: 1.6; /* Set the line height */
+}
+
+
+.procedure-title {
+  font-size: 42px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); 
+}
+.material-new {
+  width: 350px;
+  height: auto; 
+  margin-right: 15px;
+  border-radius: 5%; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+.procedure-text {
+  font-size: 20px;
+  color: #555; 
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.topic {
+  border-radius: 15px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  background-color: #fff; 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
+}
+
+.topic-content {
+  padding: 20px;
+}
+
+.topic-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.topic-text {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+  text-align: justify; /* Justify the text */
+  padding: 0 20px; /* Add padding to the sides */
+  line-height: 1.6; /* Set the line height */
+}
+
+
+.subheading {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.materials-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; 
+  margin-bottom: 20px;
+}
+
+.material {
+  display: flex;
+  align-items: center;
+  margin: 0 20px; 
+}
+
+.material-image {
+  width: 70px;
+  height: auto;
+  margin-right: 15px;
+}
+
+.material span {
+  font-size: 18px;
+  color: #333;
+}
+
+.procedure-steps {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.procedure-steps li {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Button styles */
+.button {
+  display: inline-block;
+  padding: 12px 30px; 
+  border: none;
+  border-radius: 40px; 
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none; 
+}
+.back-button {
+  background: linear-gradient(to right, #4e54c8, #8f94fb); 
+  color: #fff; 
+  box-shadow: 0 10px 20px rgba(78, 84, 200, 0.2); 
+}
+
+.home-button {
+  background: linear-gradient(to right, #ff416c, #ff4b2b); 
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(255, 65, 108, 0.2); 
+}
+
+.procedure-button {
+  background: linear-gradient(to right, #02aab0, #00cdac);
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(2, 170, 176, 0.2); 
+}
+
+
+.button:hover {
+  transform: translateY(-2px); 
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); 
+}
+
+/* Positioning buttons */
+.back-button {
+  margin-right: 20px; 
+}
+
+.home-button {
+  margin: 0 20px; 
+}
+
+.procedure-button {
+  margin-left: 20px;
+}

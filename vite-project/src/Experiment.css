@@ -1,0 +1,152 @@
+
+.experiment-container {
+    position: relative; /* Add position relative to set a containing block */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.experiment-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Change width to cover the viewport width */
+    height: 100vh; /* Change height to cover the viewport height */
+    object-fit: cover;
+    z-index: -1;
+}
+
+.experiment-content {
+    position: relative;
+    z-index: 1;
+}
+
+.experiment-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.experiment-item {
+    margin: 0 10px;
+    text-align: center;
+}
+
+.experiment-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.experiment-image {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+
+/* Experiment Button Styling */
+.experiment-button {
+    padding: 20px 40px; /* Increase padding for a more prominent button */
+    font-size: 24px; /* Larger font size for better visibility */
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 50px; /* Make the button fully rounded */
+    background: linear-gradient(45deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3); /* Multicolor gradient background */
+    background-size: 400% 400%; /* Larger background size for extreme animation */
+    color: #fff;
+    cursor: pointer;
+    animation: rainbow 10s ease infinite, pulse 1.5s ease infinite alternate, shadow-pulse 2s ease-in-out infinite, glow 1.5s ease-in-out infinite; /* Apply rainbow animation, pulse effect, shadow pulse, and glow effect */
+    transition: transform 0.5s, box-shadow 0.5s; /* Smooth transformation and shadow */
+    position: relative;
+    overflow: hidden;
+    z-index: 1; /* Ensure button appears above pseudo-element */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); /* Add shadow */
+}
+
+/* Button hover effect */
+.experiment-button::before {
+    content: ''; /* Add pseudo-element */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.4s ease;
+}
+
+/* Button hover effect */
+.experiment-button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Button text hover effect */
+.experiment-button:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.6); /* Increase shadow on hover */
+}
+
+/* Rainbow animation */
+@keyframes rainbow {
+    0% {
+        background-position: 0% 50%; /* Initial position */
+    }
+    50% {
+        background-position: 100% 50%; /* Mid position */
+    }
+    100% {
+        background-position: 0% 50%; /* Final position */
+    }
+}
+
+/* Pulse animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1); /* Initial scale */
+    }
+    100% {
+        transform: scale(1.1); /* Scale up */
+    }
+}
+
+/* Shadow pulse animation */
+@keyframes shadow-pulse {
+    0% {
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); /* Initial shadow */
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.5); /* Mid shadow */
+    }
+    100% {
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); /* Final shadow */
+    }
+}
+
+/* Glow animation */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.5); /* Initial glow */
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.7), 0 0 40px rgba(255, 255, 255, 0.7); /* Mid glow */
+    }
+    100% {
+        text-shadow: 0 0 30px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 255, 255, 1), 0 0 50px rgba(255, 255, 255, 1); /* Final glow */
+    }
+}
+
+
+h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}

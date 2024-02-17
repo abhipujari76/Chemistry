@@ -1,0 +1,107 @@
+/* EXTREME LEVEL 10000000 NAVIGATION STYLES */
+
+/* General styling for the navigation */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:  0;
+    color: #fff;
+    background-color: #00026d;
+    border-radius: 0 0 30px 30px;
+    padding: 2px 50px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    z-index: 9999;
+}
+
+/* Navigation logo styling */
+.nav-logo {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #fff; /* Set text color to white */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); /* Add text shadow for depth */
+    transition: transform 0.5s ease; /* Add transition effect for hover */
+}
+
+/* Navbar Brand Hover Effect */
+.nav-logo:hover {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg) scale(1.2); /* Add 3D rotation and scale effect on hover */
+}
+/* Animation for logo */
+@keyframes logo-glow {
+    0% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+    50% {
+        text-shadow: 0 0 40px rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+}
+
+/* Animation for logo */
+.nav-logo:hover {
+    animation: logo-glow 1s infinite;
+}
+
+/* Styling for the navigation menu */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+}
+
+/* Styling for individual menu items */
+.nav-menu li {
+    margin-left: 30px;
+    position: relative;
+}
+
+/* Styling for NavLink */
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    background: linear-gradient(120deg, #ff6600, #ff3300);
+    background-size: 200%;
+    position: relative;
+    z-index: 2;
+}
+
+/* Hover effect for NavLink */
+.nav-link:hover {
+    background-position: right;
+    color: #001865;
+}
+
+/* Styling for the login button */
+.nav-login {
+    border: none;
+    background: transparent;
+    color: #ffcc00;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+/* Hover effect for the login button */
+.nav-login:hover {
+    background: #ffcc00;
+    color: #000;
+    transform: scale(1.1);
+}

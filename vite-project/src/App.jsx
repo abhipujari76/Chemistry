@@ -1,49 +1,57 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Signup from './Signup';
 import Login from './Login';
 import Home from './Home';
-import Background from "./components/Background/Background";
-import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
+import Navbar from "./Components/Navbar/Navbar";
+import Logout from "./Components/Logout/Logout";
+import Explore from "./Explore";
+import Background from "./Components/Background/Background";
+import Experiment from "./Experiment";
+import TitrationTheory from "./Theory1";
+import Theory2 from "./Theory2";
+import Theory3 from "./Theory3";
+import Procedure from "./Procedure";
+import Procedure2 from "./Procedure2";
+import Procedure3 from "./Procedure3";
+import Animation from "./Animation/Animation";
+import Animation2 from "./Animation/Animation2";
+import Animation3 from "./Animation/Animation3";
+import Equation from "./Equation";
 
+import { MaybeshowNavbar } from "./Components/MaybeshowNavbar/MaybeshowNavbar";
 const App = () => {
-    const heroData = [
-        { text1: "Dive into", text2: "what you love" },
-        { text1: "Indulge", text2: "your passions" },
-        { text1: "Give in to", text2: "your passions" }
-    ];
-
-    const [heroCount, setHeroCount] = useState(0);
-    const [playStatus, setPlayStatus] = useState(false);
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setHeroCount(count => (count === 2 ? 0 : count + 1));
-        }, 3000);
-        return () => clearInterval(interval);
-    }, []);
-
     return (
         <BrowserRouter>
+            <Background/>
+            
+            <MaybeshowNavbar>
+                <Navbar/>
+            </MaybeshowNavbar>
+           
+
             <Routes>
                 <Route path='/register' element={<Signup />} />
                 <Route path='/login' element={<Login />} />
                 <Route path='/home' element={<Home />} />
+                <Route path='/logout' element={<Logout />} /> 
+                <Route path='/explore' element={<Explore />} /> 
+                <Route path='/Experiment' element={<Experiment />} />
+                    <Route path='/Procedure' element={<Procedure />} />
+                    <Route path='/Procedure2' element={<Procedure2 />} />
+                    <Route path='/Procedure3' element={<Procedure3 />} />
+                    <Route path='/Theory1' element={<TitrationTheory />} />
+                    <Route path='/Theory2' element={<Theory2 />} />
+                    <Route path='/Theory3' element={<Theory3 />} />
+                    <Route path='/Animation' element={<Animation />} />
+                    <Route path='/Animation2' element={<Animation2 />} />
+                    <Route path='/Animation3' element={<Animation3 />} />
+                    <Route path='/Equation' element={<Equation />} />
+                
             </Routes>
-
-            <div>
-                <Background playStatus={playStatus} heroCount={heroCount} />
-                <Navbar />
-                <Hero
-                    setPlayStatus={setPlayStatus}
-                    heroData={heroData[heroCount]}
-                    heroCount={heroCount}
-                    setHeroCount={setHeroCount}
-                    playStatus={playStatus}
-                />
-            </div>
+            
+            
         </BrowserRouter>
     );
 };

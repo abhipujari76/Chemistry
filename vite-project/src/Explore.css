@@ -1,0 +1,128 @@
+/* Container Styling */
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.video-overlay {
+  position: relative;
+  z-index: 1;
+  padding: 20px; /* Adjust padding as needed */
+}
+.explore-container {
+  /* Even larger max-width for a grander layout */
+
+ /* Generous padding for a luxurious feel */
+ background: radial-gradient(circle, #ff6f61, #ffda63); /* Radial gradient background with vibrant colors */
+ border-radius: 50px; /* Rounded corners for a more organic look */
+ box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+ max-width: 1000px;
+   margin: 0 auto;
+   padding: 20px;
+   font-family: Arial, sans-serif; /* Intense shadow for dramatic effect */
+}
+
+/* Explore Title Styling */
+.explore-title {
+  font-size: 64px; /* Larger font size for grandeur */
+  color: #ffffff; /* White color for contrast */
+  margin-bottom: 50px; /* Increased margin bottom for spacing */
+  text-align: center; /* Center alignment for visual appeal */
+  text-transform: uppercase; /* Uppercase text for emphasis */
+  font-family: 'Montserrat', sans-serif; /* Luxurious font family */
+  letter-spacing: 3px; /* Increased letter spacing for sophistication */
+  animation: fade-in 1s ease-out; /* Subtle fade-in animation for elegance */
+}
+
+/* Explore Text Styling */
+.explore-text {
+  font-size: 24px; /* Larger font size for readability */
+  color: #ffffff; /* White color for contrast */
+  margin-bottom: 60px; /* Increased margin bottom for spacing */
+  text-align: center; /* Center alignment for visual appeal */
+  font-family: 'Roboto', sans-serif; /* Modern font family */
+  animation: slide-up 1s ease-out; /* Slide-up animation for dynamic effect */
+}
+
+/* Topics Styling */
+.topics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Responsive grid layout */
+  gap: 60px; /* Increased gap for a more spacious feel */
+}
+
+/* Topic Styling */
+.topic {
+  display: flex;
+  flex-direction: column; /* Adjust to column layout for elegance */
+  align-items: center; /* Center horizontally */
+  padding: 50px; /* Increased padding for a luxurious feel */
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background for sophistication */
+  border-radius: 30px; /* Rounded corners for a modern look */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions on hover */
+}
+
+.topic:hover {
+  transform: translateY(-10px); /* Lift on hover for interactive feel */
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3); /* Increase shadow on hover for drama */
+}
+
+/* Icon Container Styling */
+.icon-container {
+  margin-bottom: 30px; /* Increased margin bottom for spacing */
+}
+
+/* Topic Icon Styling */
+.topic-icon {
+  font-size: 64px; /* Larger icon size for emphasis */
+  color: #ff6f61; /* Vibrant orange color for visual impact */
+}
+
+/* Topic Content Styling */
+.topic-content {
+  text-align: center; /* Center alignment for visual appeal */
+}
+
+/* Topic Title Styling */
+.topic-title {
+  font-size: 36px; /* Larger font size for emphasis */
+  color: #333333; /* Dark gray color for contrast */
+  margin-bottom: 20px; /* Increased margin bottom for spacing */
+  font-family: 'Montserrat', sans-serif; /* Luxurious font family */
+}
+
+/* Topic Text Styling */
+.topic-text {
+  font-size: 20px; /* Increased font size for readability */
+  color: #555555; /* Gray color for contrast */
+  line-height: 1.6; /* Increased line height for readability */
+  font-family: 'Roboto', sans-serif; /* Modern font family */
+}
+
+/* Animation Keyframes */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

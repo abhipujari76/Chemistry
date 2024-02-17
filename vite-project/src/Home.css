@@ -1,0 +1,21 @@
+/* Centered Content Styles */
+
+.centered-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .centered-image {
+    max-width: 100%;
+    max-height: 95vh; /* Adjust as needed */
+  }
+  
+  .centered-text {
+    font-size: 24px;
+    margin-top: 20px; /* Adjust as needed */
+    text-align: center;
+  }
+  

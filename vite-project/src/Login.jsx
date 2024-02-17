@@ -1,21 +1,28 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 function Login() {
-
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
+
+    axios.defaults.withCredentials = true;
 
     const handleSubmit = (e) => {
         e.preventDefault();
         axios.post('http://localhost:3001/login', { email, password })
             .then(result => {
                 console.log(result);
-                if (result.data === "Success") { // Changed to match backend response
+                if (result.data === "Success") {
+                    // Clear frontend cookie
+                    document.cookie = 'token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+
+                    // Replace current page URL with home page URL
+                    window.history.replaceState(null, '', '/home');
+
+                    // Navigate to home page
                     navigate('/home');
                 }
             })
@@ -34,7 +41,7 @@ function Login() {
                         <input
                             type="text"
                             placeholder="Enter Email"
-                            autoComplete="off" // Corrected attribute name
+                            autoComplete="off"
                             name="email"
                             className="form-control rounded-0"
                             onChange={(e) => setEmail(e.target.value)}
@@ -45,9 +52,9 @@ function Login() {
                             <strong>Password</strong>
                         </label>
                         <input
-                            type="password" // Changed input type to password
+                            type="password"
                             placeholder="Enter Password"
-                            autoComplete="off" // Corrected attribute name
+                            autoComplete="off"
                             name="password"
                             className="form-control rounded-0"
                             onChange={(e) => setPassword(e.target.value)}

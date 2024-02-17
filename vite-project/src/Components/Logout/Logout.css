@@ -1,0 +1,31 @@
+@keyframes logout-scale {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .logout-animation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logout-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #007bff; /* Blue color */
+    animation: logout-scale 2s infinite; /* Apply animation */
+  }
+  
+  .logout-text {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+  }

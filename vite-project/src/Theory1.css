@@ -1,0 +1,96 @@
+/* Theory1.css */
+
+/* Main container styles */
+.theory-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Video background */
+.theory-container video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Decorative element */
+.theory-container:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    background: linear-gradient(45deg, #007bff, #ff00ff);
+    z-index: -1;
+}
+
+/* Heading styles */
+.theory-heading {
+    font-size: 32px;
+    font-weight: bold;
+    color: #000; /* Set title color to black */
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Content paragraph styles */
+.theory-content {
+    color: #333;
+    line-height: 1.6;
+    font-size: 18px;
+    text-align: justify; /* Justify text */
+}
+
+/* Paragraph spacing */
+.theory-content p {
+    margin-bottom: 20px;
+}
+.buttons-container {
+    display: flex;
+    justify-content: space-between; /* Align items to left and right */
+    margin-top: 60px;
+}
+
+/* Back button styles */
+.back-button1, .procedure-button1 {
+    display: inline-block;
+    padding: 20px 40px;
+    background: linear-gradient(to right, #ff4d9e, #ffcb77); /* Gradient with vibrant colors */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    border: none; /* Remove border */
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Back button styles */
+.back-button1 {
+    margin-right: auto; /* Push button to the left */
+}
+
+/* Procedure button styles */
+.procedure-button1 {
+    margin-left: auto; /* Push button to the right */
+}
+
+/* Button hover effects */
+.back-button1:hover, .procedure-button1:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}

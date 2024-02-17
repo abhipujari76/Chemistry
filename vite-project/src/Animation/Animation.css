@@ -1,0 +1,124 @@
+
+.Animation-container {
+  /* Even larger max-width for a grander layout */
+
+ /* Generous padding for a luxurious feel */
+ background: radial-gradient(circle, #ff6f61, #ffda63); /* Radial gradient background with vibrant colors */
+ border-radius: 50px; /* Rounded corners for a more organic look */
+ box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+ max-width: 1000px;
+   margin: 0 auto;
+   padding: 20px;
+   font-family: Arial, sans-serif; /* Intense shadow for dramatic effect */
+}
+
+.page-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.video-row {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.video-container {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.video-container:last-child {
+    margin-right: 0;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .video-row {
+        flex-direction: column;
+    }
+
+    .video-container {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+.button2 {
+    display: inline-block;
+    padding: 12px 30px; 
+    border: none;
+    border-radius: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none; 
+  }
+  
+  .back-button2 {
+    background: linear-gradient(to right, #4e54c8, #8f94fb); 
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(78, 84, 200, 0.2); 
+  }
+  
+  .home-button2 {
+    background: linear-gradient(to right, #ff416c, #ff4b2b); 
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(255, 65, 108, 0.2);
+  }
+  
+  .procedure-button2 {
+    background: linear-gradient(to right, #02aab0, #00cdac); 
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(2, 170, 176, 0.2); 
+  }
+  
+  /* Button hover effects */
+  .button2:hover {
+    transform: translateY(-2px); 
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); 
+  }
+  
+  /* Positioning buttons */
+  .back-button2 {
+    margin-right: 20px; 
+  }
+  
+  .home-button2 {
+    margin: 0 20px;  
+  }
+  
+  .procedure-button2 {
+    margin-left: 20px; 
+  }
+  /* Animation.css */
+
+.container {
+  position: relative;
+  text-align: center;
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
