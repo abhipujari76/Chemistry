@@ -1,114 +1,103 @@
+/* Main container */
 .equation-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 130vh;
     padding: 20px;
     border-radius: 20px;
-    position: relative; /* Position relative for containing absolute elements */
-    overflow: hidden; /* Hide overflow content */
-    background-color: rgba(240, 242, 245, 0.6); /* Semi-transparent background color */
-}
-
-/* Video background */
-.video-background1 {
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(240, 242, 245, 0.6);
+    }
+    /* Video background */
+    .video-background1 {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1; /* Place video behind other content */
-}
-
-/* Equation box */
-.equation-box {
+    z-index: -1;
+    }
+    /* Equation box */
+    .equation-box {
     margin: 20px;
-    z-index: 1; /* Ensure content appears above video */
-}
-
-/* Input fields */
-.equation-box input[type="text"] {
+    z-index: 1;
+    }
+    /* Input fields */
+    .equation-box input[type="text"] {
     padding: 12px;
     width: 250px;
-    border: 2px solid #007bff; /* Blue border */
+    border: 2px solid #007bff;
     border-radius: 10px;
     font-size: 18px;
-    transition: border-color 0.3s ease; /* Smooth transition */
-}
-
-.equation-box input[type="text"]:focus {
-    border-color: #0056b3; /* Darker blue border color on focus */
-}
-
-/* Plus sign */
-.plus-sign {
-    font-size: 28px;
-    margin: 0 15px;
-    color: #343a40; /* Dark gray color */
-}
-
-/* Toggle and calculate buttons */
-.toggle-button, .calculate-button {
+    transition: border-color 0.3s ease;
+    }
+    .equation-box input[type="text"]:focus {
+    border-color: #0056b3;
+    }
+    /* Plus sign */
+    .plus-sign,
+    .equal-sign {
+    margin: 0 120px; /* Adjust the margin as needed */
+    }
+    /* Toggle and calculate buttons */
+    .toggle-button, .calculate-button {
     padding: 12px 24px;
     margin: 20px;
     font-size: 18px;
     font-weight: bold;
-    background-color: #007bff; /* Blue color */
-    color: #fff; /* White color */
+    background-color: #007bff;
+    color: #fff;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
-
-.toggle-button:hover, .calculate-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-}
-
-/* Answer box */
-.answer-box {
+    }
+    .toggle-button:hover, .calculate-button:hover {
+    background-color: #0056b3;
+    }
+    /* Answer box */
+    .answer-box {
     margin-top: 40px;
     padding: 20px;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent background color */
+    background-color: rgba(255, 255, 255, 0.95);
     border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
-}
-
-.answer-box label {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: center;
+    }
+    /* Explanation text */
+    .explanation-text {
+    font-size: 16px;
+    color: #6c757d;
+    margin-top: 15px;
+    }
+    /* Formula name */
+    .answer-box label {
     font-weight: bold;
     font-size: 24px;
-    color: #007bff; /* Blue color */
-}
-
-.answer-box div {
-    margin-top: 15px;
-    font-size: 20px;
-    color: #333; /* Dark gray color */
-}
-
-/* Explanation text */
-.explanation-text {
-    font-size: 16px;
-    color: #6c757d; /* Gray color */
-    margin-top: 15px;
-}
-
-/* Link button */
-.link-button {
-    margin-top: 30px;
-    padding: 12px 24px;
-    font-size: 18px;
-    color: #fff; /* White color */
-    background-color: #007bff; /* Blue color */
-    border: none;
+    color: #007bff;
+    margin-bottom: 10px; /* Add margin at the bottom for spacing */
+    }
+    /* Video container */
+    .video-container5 {
+    margin-top: 10px; /* Adjust margin top for spacing */
+    width: 70%;
+    max-width: 600px;
+    height: auto;
+    max-height: 400px;
+    overflow: hidden;
+    border: 2px solid #007bff;
     border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.link-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-}
+    }
+    /* Responsive YouTube video */
+    .video-container5 iframe {
+    width: 100%; /* Make the iframe fill the entire width of the container */
+    height: 100%; /* Make the iframe fill the entire height of the container */
+    object-fit: cover; /* Ensure the video covers the entire container without stretching */
+    }

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Components/NavHome/Explore.css'; 
+import './Explore.css'; 
 import { FaAtom, FaFlask, FaRegSnowflake, FaMicroscope, FaBookOpen, FaBurn } from 'react-icons/fa'; // Import icons
 import video4 from './assets/video4.mp4';
 import Navdash from './Navdash';
